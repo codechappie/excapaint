@@ -1,38 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  background: blue;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.excalipaint {
+  background: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.excalipaint .layer-ui__library-header a {
+  display: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.excalipaint .show-changue-views {
+  background: #0e0e0e;
+  position: fixed;
+  z-index: 10;
+  bottom: 50px;
+  right: 12px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+}
+.excalipaint .show-changue-views img {
+  max-width: 21px;
+}
+.excalipaint .overlayButtons {
+  background: #00000036;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+.excalipaint .button-wrapper {
+  position: absolute;
+  bottom: 90px;
+  right: 12px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: max-content;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.excalipaint .button-wrapper label {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  cursor: pointer;
+}
+.excalidraw .Dialog__content .Stack label:nth-child(4) {
+  display: none;
+}
+.excalipaint .button-wrapper button {
+  z-index: 1;
+  height: 40px;
+  max-width: 200px;
+  margin: 10px;
+  padding: 5px;
+}
+.excalipaint .excalidraw .App-menu_top .buttonList {
+  display: flex;
+}
+.excalipaint .excalidraw-wrapper {
+  height: 100%;
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+:root[dir="ltr"]
+  .excalidraw
+  .layer-ui__wrapper
+  .zen-mode-transition.App-menu_bottom--transition-left {
+  transform: none;
+}
+.excalipaint .excalidraw .panelColumn {
+  text-align: left;
+}
+.excalipaint .export-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+.excalipaint .export-wrapper__checkbox {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Hidden*/
+.excalipaint .HelpDialog--header,
+.excalipaint .excalidraw .github-corner,
+.excalipaint .excalidraw .layer-ui__wrapper .encrypted-icon {
+  display: none !important;
 }
