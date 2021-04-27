@@ -11,11 +11,11 @@ import InitialData from "./initialData";
 import initialData from "./initialData";
 
 const EscaliPaint = () => {
-  const excalidrawRef = React.useRef<any>(null);
+  const excalidrawRef = React.useRef(null);
 
-  const [viewModeEnabled, setViewModeEnabled] = useState<boolean>(false);
-  const [zenModeEnabled, setZenModeEnabled] = useState<boolean>(false);
-  const [gridModeEnabled, setGridModeEnabled] = useState<boolean>(false);
+  const [viewModeEnabled, setViewModeEnabled] = useState(false);
+  const [zenModeEnabled, setZenModeEnabled] = useState(false);
+  const [gridModeEnabled, setGridModeEnabled] = useState(false);
   const [theme, setTheme] = useState("light");
   const [showViewMode, setShowViewMode] = useState(false);
   useEffect(() => {
@@ -23,7 +23,7 @@ const EscaliPaint = () => {
       const hash = new URLSearchParams(window.location.hash.slice(1));
       const libraryUrl = hash.get("addLibrary");
       if (libraryUrl) {
-        excalidrawRef.current?.importLibrary(libraryUrl, hash.get("token"));
+        excalidrawRef.current.importLibrary(libraryUrl, hash.get("token"));
       }
     };
     window.addEventListener("hashchange", onHashChange, false);
