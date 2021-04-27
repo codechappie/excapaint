@@ -1,5 +1,5 @@
 import './App.css';
-import EscaliPaint from './escalipaint/EscaliPaint';
+import EscaliPaint from './escalipaint/EscaliPaint.jsx';
 
 function App() {
   return (

@@ -7,7 +7,6 @@ import Excalidraw, {
   languages,
 } from "@excalidraw/excalidraw";
 import InitialData from "./initialData";
-// import Sidebar from "./sidebar/sidebar";
 
 import initialData from "./initialData";
 
@@ -17,7 +16,7 @@ const EscaliPaint = () => {
   const [viewModeEnabled, setViewModeEnabled] = useState<boolean>(false);
   const [zenModeEnabled, setZenModeEnabled] = useState<boolean>(false);
   const [gridModeEnabled, setGridModeEnabled] = useState<boolean>(false);
-  const [theme, setTheme] = useState<any>("light");
+  const [theme, setTheme] = useState("light");
   const [showViewMode, setShowViewMode] = useState(false);
   useEffect(() => {
     const onHashChange = () => {
@@ -130,10 +129,10 @@ const EscaliPaint = () => {
         <Excalidraw
           ref={excalidrawRef}
           initialData={InitialData}
-          onChange={(elements: any, state: any) =>
+          onChange={(elements, state) =>
             console.log("Elements :", elements, "State : ", state)
           }
-          onPointerUpdate={(payload: any) => console.log(payload)}
+          onPointerUpdate={(payload) => console.log(payload)}
           //   onCollabButtonClick={() =>
           //     window.alert("You clicked on collab button")
           //   }
