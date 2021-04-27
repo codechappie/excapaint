@@ -17,7 +17,7 @@ const EscaliPaint = () => {
   const [viewModeEnabled, setViewModeEnabled] = useState<boolean>(false);
   const [zenModeEnabled, setZenModeEnabled] = useState<boolean>(false);
   const [gridModeEnabled, setGridModeEnabled] = useState<boolean>(false);
-  const [theme, setTheme] = useState<string>("light");
+  const [theme, setTheme] = useState<any>("light");
   const [showViewMode, setShowViewMode] = useState(false);
   useEffect(() => {
     const onHashChange = () => {
